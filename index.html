@@ -7,50 +7,45 @@
   <meta name="description" content="Trusted postpartum pelvic health guidance. Pain relief, recovery, confidence." />
   <style>
     :root{
-      --plum:#4B1B5A; /* primary */
-      --lilac:#DBC8E2; /* secondary */
-      --beige:#F8F4F0; /* background */
-      --rose:#EE3AAC0; /* typo fixed later if needed */
-      --text:#2b2230;
+      --plum:#4B1B5A; --lilac:#DBC8E2; --beige:#F8F4F0; --text:#2b2230;
     }
     *{box-sizing:border-box}
     body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;color:var(--text);background:var(--beige);}
     a{color:var(--plum)}
     .container{max-width:1120px;margin:0 auto;padding:24px}
     header{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+    .brand{display:flex;align-items:center;gap:10px}
     .logo{font-weight:800;color:var(--plum);font-size:24px;letter-spacing:.3px}
-    .badge{background:var(--lilac);color:var(--plum);padding:6px 10px;border-radius:999px;font-size:12px}
+    .tagline{color:#6b5a79;opacity:.85;font-size:14px}
     .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center;padding:40px 0}
     h1{font-size:clamp(28px,4vw,44px);line-height:1.1;margin:0 0 10px;color:var(--plum)}
-    .sub{font-size:18px;opacity:.9;margin:0 0 18px}
+    .sub{font-size:18px;opacity:.9;margin:0 0 18px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
     .card{background:#fff;border-radius:16px;box-shadow:0 8px 28px rgba(23,15,35,.06);padding:20px}
-    .cta{display:flex;gap:12px;align-items:center;margin-top:14px}
     .btn{background:var(--plum);color:#fff;border:none;border-radius:10px;padding:14px 18px;font-weight:700;cursor:pointer}
-    .btn:focus{outline:3px solid var(--lilac)}
-    .muted{font-size:12px;opacity:.75}
-    .illus{background:var(--lilac);border-radius:18px;aspect-ratio:4/3;display:grid;place-items:center;color:var(--plum);font-weight:700}
+    .illus img{width:100%;height:auto;border-radius:18px;display:block}
     .trust{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:34px 0}
     .trust .card{min-height:120px}
     .section{padding:30px 0}
     .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
     footer{padding:24px 0;border-top:1px solid #e9e3ee;font-size:14px;color:#5b4a61}
-    @media (max-width:900px){
-      .hero{grid-template-columns:1fr}
-      .trust{grid-template-columns:1fr}
-      .grid2{grid-template-columns:1fr}
-    }
-    /* simple form styles */
     form{display:flex;gap:10px;flex-wrap:wrap}
     input[type=email]{flex:1;min-width:220px;padding:14px;border:1px solid #e0d6ea;border-radius:10px}
     .legal{font-size:12px;opacity:.7;margin-top:8px}
     .note{background:#fff;border-left:4px solid var(--plum);padding:12px;border-radius:10px}
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .trust,.grid2{grid-template-columns:1fr}
+      .sub{white-space:normal} /* wrap on small screens */
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <div class="logo">Vagisense</div>
-      <div class="badge">Guiding Women to Pelvic Health</div>
+      <div class="brand">
+        <div class="logo">Vagisense</div>
+        <div class="tagline">Guiding Women to Pelvic Health</div>
+      </div>
     </header>
 
     <section class="hero">
@@ -59,19 +54,22 @@
         <p class="sub">Trusted expertise from a certified pelvic floor specialist — now available online.</p>
         <div class="card">
           <p><strong>Free guide:</strong> Postpartum Recovery Checklist — first steps to reduce pain, protect your scar, and feel like yourself again.</p>
-          <form method="post" action="https://example.com/replace-with-your-email-form-endpoint"> <!-- TODO: replace with MailerLite/Getform/Formspree action URL -->
+          <form method="post" action="https://example.com/replace-with-your-email-form-endpoint">
             <input type="email" name="email" placeholder="Enter your email" required>
             <button class="btn" type="submit">Get My Free Checklist</button>
           </form>
           <p class="legal">We respect your privacy. Unsubscribe anytime.</p>
         </div>
       </div>
-      <div class="illus">Hero Illustration / Logo Here</div>
+      <div class="illus">
+        <!-- Replace the src with your image path -->
+        <img src="images/hero.jpg" alt="Calm portrait representing postpartum support">
+      </div>
     </section>
 
     <section class="section">
       <div class="trust">
-        <div class="card"><strong>Evidence‑based.</strong><br>Exercises and protocols used daily in clinic.</div>
+        <div class="card"><strong>Evidence-based.</strong><br>Exercises and protocols used daily in clinic.</div>
         <div class="card"><strong>Real expertise.</strong><br>Backed by a certified pelvic floor physiotherapist.</div>
         <div class="card"><strong>Discreet & supportive.</strong><br>Get help privately, at your pace.</div>
       </div>
