@@ -6,140 +6,55 @@
   <title>Vagisense – Guiding Women to Pelvic Health</title>
   <meta name="description" content="Trusted postpartum pelvic health guidance. Pain relief, recovery, confidence." />
   <style>
-    :root {
-      --plum: #4B1B5A;
-      --lilac: #DBC8E2;
-      --beige: #F8F4F0;
-      --text: #2b2230;
+    :root{
+      --plum:#4B1B5A; --lilac:#DBC8E2; --beige:#F8F4F0; --text:#2b2230;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Helvetica, Arial, sans-serif;
-      color: var(--text);
-      background: var(--beige);
-    }
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      display: flex;
-      justify-content: center;
-      background: rgba(255, 255, 255, 0.9);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid #eaeaea;
-      z-index: 1000;
-      padding: 10px 20px;
-    }
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .logo-img {
-      height: 55px;
-      width: auto;
-    }
-    .tagline {
-      font-size: 14px;
-      color: #6b5a79;
-      opacity: .85;
-    }
-    .container {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 100px 24px 24px; /* top padding for fixed header */
-    }
-    .hero {
-      display: grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 36px;
-      align-items: center;
-      padding: 40px 0;
-    }
-    h1 {
-      font-size: clamp(28px, 4vw, 44px);
-      line-height: 1.1;
-      margin: 0 0 10px;
-      color: var(--plum);
-    }
-    .sub {
-      font-size: 18px;
-      opacity: .9;
-      margin: 0 0 18px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    .card {
-      background: #fff;
-      border-radius: 16px;
-      box-shadow: 0 8px 28px rgba(23, 15, 35, .06);
-      padding: 20px;
-    }
-    .btn {
-      background: var(--plum);
-      color: #fff;
-      border: none;
-      border-radius: 10px;
-      padding: 14px 18px;
-      font-weight: 700;
-      cursor: pointer;
-    }
-    .illus img {
-      width: 100%;
-      height: auto;
-      border-radius: 18px;
-      display: block;
-    }
-    .trust {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      margin: 34px 0;
-    }
-    .trust .card {
-      min-height: 120px;
-    }
-    .section {
-      padding: 30px 0;
-    }
-    footer {
-      padding: 24px 0;
-      border-top: 1px solid #e9e3ee;
-      font-size: 14px;
-      color: #5b4a61;
-      text-align: center;
-    }
-    @media (max-width: 900px) {
-      .hero {
-        grid-template-columns: 1fr;
-      }
-      .trust {
-        grid-template-columns: 1fr;
-      }
-      .sub {
-        white-space: normal;
-      }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;color:var(--text);background:var(--beige);}
+    a{color:var(--plum)}
+    .container{max-width:1120px;margin:0 auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+    .brand{display:flex;align-items:center;gap:10px}
+    .logo{font-weight:800;color:var(--plum);font-size:24px;letter-spacing:.3px}
+    .tagline{color:#6b5a79;opacity:.85;font-size:14px}
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center;padding:40px 0}
+    h1{font-size:clamp(28px,4vw,44px);line-height:1.1;margin:0 0 10px;color:var(--plum)}
+    .sub{font-size:18px;opacity:.9;margin:0 0 18px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .card{background:#fff;border-radius:16px;box-shadow:0 8px 28px rgba(23,15,35,.06);padding:20px}
+    .btn{background:var(--plum);color:#fff;border:none;border-radius:10px;padding:14px 18px;font-weight:700;cursor:pointer}
+    .illus img{width:100%;height:auto;border-radius:18px;display:block}
+    .trust{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:34px 0}
+    .trust .card{min-height:120px}
+    .section{padding:30px 0}
+    .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+    footer{padding:24px 0;border-top:1px solid #e9e3ee;font-size:14px;color:#5b4a61}
+    form{display:flex;gap:10px;flex-wrap:wrap}
+    input[type=email]{flex:1;min-width:220px;padding:14px;border:1px solid #e0d6ea;border-radius:10px}
+    .legal{font-size:12px;opacity:.7;margin-top:8px}
+    .note{background:#fff;border-left:4px solid var(--plum);padding:12px;border-radius:10px}
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .trust,.grid2{grid-template-columns:1fr}
+      .sub{white-space:normal} /* wrap on small screens */
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="brand">
-      <img src="images/logo.png" alt="Vagisense logo" class="logo-img">
-      <div class="tagline">Guiding Women to Pelvic Health</div>
-    </div>
-  </header>
-
   <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">Vagisense</div>
+        <div class="tagline">Guiding Women to Pelvic Health</div>
+      </div>
+    </header>
+
     <section class="hero">
       <div>
         <h1>Pelvic pain after birth? You don’t have to live with it.</h1>
         <p class="sub">Trusted expertise from a certified pelvic floor specialist — now available online.</p>
         <div class="card">
           <p><strong>Free guide:</strong> Postpartum Recovery Checklist — first steps to reduce pain, protect your scar, and feel like yourself again.</p>
-          <form method="post" action="#">
+          <form method="post" action="https://example.com/replace-with-your-email-form-endpoint">
             <input type="email" name="email" placeholder="Enter your email" required>
             <button class="btn" type="submit">Get My Free Checklist</button>
           </form>
@@ -147,23 +62,39 @@
         </div>
       </div>
       <div class="illus">
-        <img src="images/hero.jpg" alt="Vagisense illustration">
+        <!-- Replace the src with your image path -->
+        <img src="images/hero.jpg" alt="Calm portrait representing postpartum support">
       </div>
     </section>
 
-    <section class="section trust">
-      <div class="card"><strong>Evidence-based.</strong><br>Exercises and protocols used daily in clinic.</div>
-      <div class="card"><strong>Real expertise.</strong><br>Backed by a certified pelvic floor physiotherapist.</div>
-      <div class="card"><strong>Discreet & supportive.</strong><br>Get help privately, at your pace.</div>
+    <section class="section">
+      <div class="trust">
+        <div class="card"><strong>Evidence-based.</strong><br>Exercises and protocols used daily in clinic.</div>
+        <div class="card"><strong>Real expertise.</strong><br>Backed by a certified pelvic floor physiotherapist.</div>
+        <div class="card"><strong>Discreet & supportive.</strong><br>Get help privately, at your pace.</div>
+      </div>
+    </section>
+
+    <section class="section grid2">
+      <div class="card">
+        <h3>What you’ll learn</h3>
+        <ul>
+          <li>How to care for your scar and reduce pain during intimacy</li>
+          <li>Safe, gentle exercises for core and pelvic floor</li>
+          <li>What to avoid in the first 6–12 weeks</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Who it’s for</h3>
+        <p>New moms with pelvic pain, scar discomfort, or confidence issues after birth. No prior experience needed.</p>
+        <div class="note">Prefer Slovene? We’ll support both English and Slovene content.</div>
+      </div>
     </section>
 
     <footer>
       © <span id="y"></span> Vagisense · <a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Contact</a>
     </footer>
   </div>
-
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
